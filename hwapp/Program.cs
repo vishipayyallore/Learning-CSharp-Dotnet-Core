@@ -7,7 +7,7 @@ namespace ConsoleApplication
         public static void Main(string[] args)
         {
             var userName = "Lord Krishna";
-            Console.WriteLine($"Hello {userName}!");
+            Console.WriteLine($"Hello {userName}!\n Please shower your grace.");
             
             Console.ReadLine();
         }
