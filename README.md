@@ -1,9 +1,10 @@
 # Learning-CSharp-Dotnet-Core
 Learning C# using .Net Core
 
-.Net Core 
-Ubuntu 14.04
-Visual Studio Code with C# debugger
-Command line DNU & DNX
-Dot.Net Cli
+
+1. .Net Core 
+2. Ubuntu 14.04
+3. Visual Studio Code with C# debugger
+4. Command line DNU & DNX
+5. Dot.Net Cli
 
