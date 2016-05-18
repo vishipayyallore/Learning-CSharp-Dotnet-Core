@@ -11,6 +11,7 @@ namespace ConsoleApplication
             Console.WriteLine("User Details ....");
             Console.WriteLine($"Name: {user.Name}\nAge: {user.Age}");
             
+            Console.WriteLine("\n\nPress any key ...");
             Console.ReadLine();
         }
     }
