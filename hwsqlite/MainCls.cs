@@ -1,7 +1,7 @@
 ﻿using System;
 using static System.Console;
 
-namespace ConsoleApplication
+namespace hwsqlite.Sample
 {
     public class MainCls
     {
