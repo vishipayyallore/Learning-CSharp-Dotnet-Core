@@ -7,11 +7,23 @@
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.0.0-rc2-3002702"
+    },
+    "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
+    "Microsoft.EntityFrameworkCore.Sqlite": "1.0.0-rc2-*",
+    "Microsoft.EntityFrameworkCore.Tools":{
+      "type": "build",
+      "version": "1.0.0-preview1-final"
     }
   },
   "frameworks": {
     "netcoreapp1.0": {
-      "imports": "dnxcore50"
+      "imports": ["dnxcore50", "portable-net45+win8"]
+    }
+  },
+  "tools": {
+    "Microsoft.EntityFrameworkCore.Tools": {
+      "version": "1.0.0-preview1-final",
+      "imports": ["dnxcore50", "portable-net45+win8"]
     }
   }
 }
