@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "newProfile1": {
+      "executablePath": "A:\\LordKrishna\\vishipayyallore\\Learning-CSharp-Dotnet-Core\\hwappwincli\\bin\\Debug\\dnxcore50\\hwappwincli.exe"
+    },
+    "hwapp": {
+      "commandName": "hwapp",
+      "sdkVersion": "dnx-coreclr-win-x64.1.0.0-rc2-16595"
+    }
+  }
+}

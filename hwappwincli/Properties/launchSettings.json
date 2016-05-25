@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "newProfile1": {
+      "executablePath": "A:\\LordKrishna\\vishipayyallore\\Learning-CSharp-Dotnet-Core\\hwappwincli\\bin\\Debug\\dnxcore50\\hwappwincli.exe",
+      "workingDirectory": "A:\\LordKrishna\\vishipayyallore\\Learning-CSharp-Dotnet-Core\\hwappwincli\\bin\\Debug\\dnxcore50"
+    }
+  }
+}

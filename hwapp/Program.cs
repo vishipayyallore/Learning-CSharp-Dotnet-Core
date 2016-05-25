@@ -1,6 +1,7 @@
-﻿using System;
+﻿
+using System;
 
-namespace ConsoleApplication
+namespace hwapp
 {
     public class Program
     {
