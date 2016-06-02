@@ -8,7 +8,6 @@ namespace Variables.Basics
     {
 
         #region Variables.
-
         private const int Population = 66000000;
         private const double Weight = 1.88;
         private const decimal Price = 4.99M;
