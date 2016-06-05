@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using static System.Console;
 
 namespace Variables.Basics
 {
@@ -35,8 +34,12 @@ namespace Variables.Basics
             personDetails.Append(NewLine);
             personDetails.Append($"The Population of UK is {Population:N0}");
             personDetails.Append(NewLine);
-            //WriteLine($"{Weight} Kgs of {Fruit} costs {Price:C}");
-            //WriteLine($"Your favorite character is {_letter}; your life is Happy and you are a {_isHappy} person.");
+            personDetails.Append($"Your name is {Name} and you are {Gender}");
+            personDetails.Append(NewLine);
+            personDetails.Append($"You are {Weight} Kgs weight and your salary is {MonthlySalary:C}");
+            personDetails.Append(NewLine);
+            personDetails.Append($"Your {IsMarried} person.");
+            personDetails.Append(NewLine);
             personDetails.Append(HeaderDoubleDash);
 
             return personDetails.ToString();

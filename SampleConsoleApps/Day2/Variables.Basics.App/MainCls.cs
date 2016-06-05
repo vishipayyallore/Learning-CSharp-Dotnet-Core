@@ -11,8 +11,6 @@ namespace Variables.Basics.App
         {
             var color = args.Length > 0 ? args[0] : "Cyan";
             ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), color, true);
-            var variablesDemo1 = new VariablesDemo1Cls();
-            variablesDemo1.DisplayDetails();
 
             var person1 = new Person();
             WriteLine(person1);
