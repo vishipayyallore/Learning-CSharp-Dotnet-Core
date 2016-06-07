@@ -11,6 +11,8 @@ namespace Variables.Basics
         private static readonly Dictionary<int, string> Values = new Dictionary<int, string>{{3, "Fizz" }, {5, "Buzz"}};
         private static char _tab = '\t';
         private static char _newLine = '\n';
+        private const int ThreeValue = 3;
+        private const int FiveValue = 5;
         #endregion
 
         public FizzBuzz(int endValue)
@@ -33,8 +35,8 @@ namespace Variables.Basics
         #region Private Methods.
         private static dynamic CheckDivisibility(int number)
         {
-            dynamic output = string.Format("{0}{1}", IsDivisible(number, 3), IsDivisible(number, 5));
-            return string.Format("{0}{1}", ((output == string.Empty) ? number : output), ((number%5 == 0) ? _newLine : _tab));
+            dynamic output = string.Format("{0}{1}", IsDivisible(number, ThreeValue), IsDivisible(number, FiveValue));
+            return string.Format("{0}{1}", ((output == string.Empty) ? number : output), ((number% FiveValue == 0) ? _newLine : _tab));
         }
 
         private static string IsDivisible(int number, int divider)
