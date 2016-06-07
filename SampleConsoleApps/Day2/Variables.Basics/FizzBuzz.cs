@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,14 +34,15 @@ namespace Variables.Basics
 
         private static dynamic CheckDivisibility(int number)
         {
-            dynamic output = "";
-            if (number%3 == 0)
-            {
-                output = string.Format("{0}", (number%3 == 0) ? Values[3] : string.Empty);
-            }
-            output = number % 5 == 0 ? string.Format("{0}{1}", output, (number % 5 == 0) ? Values[5] : string.Empty) : number;
-            output = string.Format("{0}{1}", output, ((number%10 == 0) ? _newLine : _tab));
+            dynamic output = string.Format("{0}{1}", IsDivisible(number, 3), IsDivisible(number, 5));
+            //output = (output == string.Empty) ? number : output;
+            output = string.Format("{0}{1}", ((output == string.Empty) ? number : output), ((number%10 == 0) ? _newLine : _tab));
             return output;
+        }
+
+        private static string IsDivisible(int number, int divider)
+        {
+            return string.Format("{0}", (number % divider == 0) ? Values[divider] : string.Empty); ;
         }
 
     }
