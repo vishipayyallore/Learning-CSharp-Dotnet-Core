@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Variables.Basics
 {
@@ -19,9 +15,10 @@ namespace Variables.Basics
 
         public FizzBuzz(int endValue)
         {
-            this._endValue = endValue;
+            _endValue = endValue;
         }
 
+        #region Methods.
         public string GetFizzBuzz()
         {
             var outputBuilder = new StringBuilder(250);
@@ -31,19 +28,20 @@ namespace Variables.Basics
             }
             return outputBuilder.ToString();
         }
+        #endregion
 
+        #region Private Methods.
         private static dynamic CheckDivisibility(int number)
         {
             dynamic output = string.Format("{0}{1}", IsDivisible(number, 3), IsDivisible(number, 5));
-            //output = (output == string.Empty) ? number : output;
-            output = string.Format("{0}{1}", ((output == string.Empty) ? number : output), ((number%10 == 0) ? _newLine : _tab));
-            return output;
+            return string.Format("{0}{1}", ((output == string.Empty) ? number : output), ((number%5 == 0) ? _newLine : _tab));
         }
 
         private static string IsDivisible(int number, int divider)
         {
             return string.Format("{0}", (number % divider == 0) ? Values[divider] : string.Empty); ;
         }
+        #endregion
 
     }
 

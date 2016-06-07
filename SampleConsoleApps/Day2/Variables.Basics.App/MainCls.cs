@@ -15,7 +15,7 @@ namespace Variables.Basics.App
             var person1 = new Person();
             WriteLine(person1);
 
-            var fizzBuzz = new FizzBuzz(20);
+            var fizzBuzz = new FizzBuzz(65);
             WriteLine(fizzBuzz.GetFizzBuzz());
 
             WriteLine("\n\nPress any key ...");
