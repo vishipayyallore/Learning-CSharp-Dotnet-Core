@@ -41,7 +41,7 @@ namespace Variables.Basics
 
         private static string IsDivisible(int number, int divider)
         {
-            return string.Format("{0}", (number % divider == 0) ? Values[divider] : string.Empty); ;
+            return string.Format("{0}", (number % divider == 0) ? Values[divider] : string.Empty);
         }
         #endregion
 
