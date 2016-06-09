@@ -12,10 +12,10 @@ namespace Variables.Basics.App
             var color = args.Length > 0 ? args[0] : "Cyan";
             ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), color, true);
 
-            var person1 = new Person();
-            WriteLine(person1);
+            //var person1 = new Person();
+            //WriteLine(person1);
 
-            var fizzBuzz = new FizzBuzz(65);
+            var fizzBuzz = new FizzBuzz(endValue:65, breakAt:4, startValue:15);
             WriteLine(fizzBuzz.GetFizzBuzz());
 
             WriteLine("\n\nPress any key ...");
