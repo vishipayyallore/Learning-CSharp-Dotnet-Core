@@ -7,11 +7,11 @@ namespace Variables.Basics
     public class FizzBuzz
     {
         #region Variables.
-        private readonly int _startValue;
-        private readonly int _endValue;
+        private int _startValue;
+        private int _endValue;
         private readonly int _breakAt;
         private readonly Dictionary<int, string> _values;
-        private const char TabValue = '\t';
+        private const char SpaceValue = ' ';
         private const char NewLineValue = '\n';
         private const int ThreeValue = 3;
         private const int FiveValue = 5;
@@ -29,9 +29,10 @@ namespace Variables.Basics
         public string GetFizzBuzz()
         {
             var outputBuilder = new StringBuilder(250);
-            for (var iCtr = _startValue; iCtr <= _endValue; iCtr++)
+            _endValue -= (_startValue-1);
+            for (var iCtr = 1; iCtr <= _endValue; iCtr++)
             {
-                outputBuilder.Append($"{CheckDivisibility(iCtr)}");
+                outputBuilder.Append($"{CheckDivisibility(_startValue++)}{((iCtr % _breakAt == 0) ? NewLineValue : SpaceValue)}");
             }
             return outputBuilder.ToString();
         }
@@ -41,7 +42,7 @@ namespace Variables.Basics
         private dynamic CheckDivisibility(int number)
         {
             dynamic output = string.Format("{0}{1}", IsDivisible(number, ThreeValue), IsDivisible(number, FiveValue));
-            return string.Format("{0,8}{1}", ((output == string.Empty) ? number : output), ((number% _breakAt == 0) ? NewLineValue : TabValue));
+            return string.Format("{0,8}", ((output == string.Empty) ? number : output));
         }
 
         private string IsDivisible(int number, int divider)
