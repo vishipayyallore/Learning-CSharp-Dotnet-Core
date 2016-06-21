@@ -13,7 +13,7 @@ namespace ConsoleApplication
             WriteLine($"{userName}\nPlease shower your grace!");
 
             WriteLine("\n\nPress any key ....");
-            ReadKey();
+            ReadLine();
         }
     }
 }
