@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System;
+using static System.Console;
 
 namespace ConsoleApplication
 {
@@ -6,9 +7,13 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            var userName = "Lord Krishna";
-            WriteLine($"{userName}; please shower your grace!");
+            const string userName = "Lord Krishna";
+            ForegroundColor = ConsoleColor.Cyan;
 
+            WriteLine($"{userName}\nPlease shower your grace!");
+
+            WriteLine("\n\nPress any key ....");
+            ReadKey();
         }
     }
 }
