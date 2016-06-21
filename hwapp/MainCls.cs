@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace ConsoleApplication
 {
@@ -6,7 +6,9 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var userName = "Lord Krishna";
+            WriteLine($"{userName}; please shower your grace!");
+
         }
     }
 }
