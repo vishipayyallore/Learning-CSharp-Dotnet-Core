@@ -11,6 +11,7 @@ namespace ConsoleApplication
             ForegroundColor = ConsoleColor.Cyan;
 
             WriteLine($"{userName}\nPlease shower your grace!");
+            WriteLine("Hello Satya!");
 
             WriteLine("\n\nPress any key ....");
             ReadLine();
