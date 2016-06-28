@@ -9,7 +9,7 @@ namespace hwappwincli
         {
             ForegroundColor = ConsoleColor.Cyan;
 
-            WriteLine("Hello World! \n From Windows .Net CLI.");
+            WriteLine("Hello World! \nFrom Windows .Net CLI.");
 
             WriteLine("\n\nPress any key ....");
             ReadLine();
