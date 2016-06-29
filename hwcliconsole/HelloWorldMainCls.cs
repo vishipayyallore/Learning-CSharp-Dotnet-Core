@@ -1,18 +1,20 @@
 ﻿using System;
+using static System.Console;
 
-namespace ConsoleApplication
+namespace hwcliconsole
 {
     public class HelloWorldCli
     {
         public static void Main(string[] args)
         {
             var user = new Person { Name = "Shiva Sai", Age = 26 };
+            ForegroundColor = ConsoleColor.Cyan;
+
+            WriteLine("User Details ....");
+            WriteLine($"Name: {user.Name}\nAge: {user.Age}");
             
-            Console.WriteLine("User Details ....");
-            Console.WriteLine($"Name: {user.Name}\nAge: {user.Age}");
-            
-            Console.WriteLine("\n\nPress any key ...");
-            Console.ReadLine();
+            WriteLine("\n\nPress any key ...");
+            ReadLine();
         }
     }
 }
