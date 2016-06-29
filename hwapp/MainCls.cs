@@ -1,7 +1,7 @@
 ﻿using System;
 using static System.Console;
 
-namespace ConsoleApplication
+namespace hwapp
 {
     public class MainCls
     {
