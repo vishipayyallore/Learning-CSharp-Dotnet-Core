@@ -29,10 +29,10 @@ namespace Variables.Basics
         public string GetFizzBuzz()
         {
             var outputBuilder = new StringBuilder(250);
-            _endValue -= (_startValue-1);
+            _endValue -= _startValue-1;
             for (var iCtr = 1; iCtr <= _endValue; iCtr++)
             {
-                outputBuilder.Append($"{CheckDivisibility(_startValue++)}{((iCtr % _breakAt == 0) ? NewLineValue : SpaceValue)}");
+                outputBuilder.Append($"{CheckDivisibility(_startValue++)}{(iCtr % _breakAt == 0 ? NewLineValue : SpaceValue)}");
             }
             return outputBuilder.ToString();
         }
@@ -42,12 +42,12 @@ namespace Variables.Basics
         private dynamic CheckDivisibility(int number)
         {
             dynamic output = string.Format("{0}{1}", IsDivisible(number, ThreeValue), IsDivisible(number, FiveValue));
-            return string.Format("{0,8}", ((output == string.Empty) ? number : output));
+            return string.Format("{0,8}", output == string.Empty ? number : output);
         }
 
         private string IsDivisible(int number, int divider)
         {
-            return string.Format("{0}", (number % divider == 0) ? _values[divider] : string.Empty);
+            return string.Format("{0}", number % divider == 0 ? _values[divider] : string.Empty);
         }
         #endregion
 

@@ -1,5 +1,4 @@
-﻿using Variables.Basics;
-using System;
+﻿using System;
 using static System.Console;
 
 namespace Variables.Basics.App
@@ -8,7 +7,6 @@ namespace Variables.Basics.App
     public class MainCls
     {
         #region Variables.
-        private const char NewLineValue = '\n';
         private const string HeaderDoubleDash = "======================================================================================================";
         private const string HeaderSingleDash = "------------------------------------------------------------------------------------------------------";
         #endregion

@@ -18,10 +18,6 @@ namespace Variables.Basics
         private const string HeaderSingleDash = "---------------------------------------------------";
         #endregion
 
-        public Person()
-        {
-        }
-
         #region Methods
         public override string ToString()
         {

@@ -19,10 +19,6 @@ namespace Variables.Basics
         private const string HeaderSingleDash = "---------------------------------------------------";
         #endregion
 
-        public VariablesDemo1Cls()
-        {
-        }
-
         #region Methods
         public void DisplayDetails()
         {
