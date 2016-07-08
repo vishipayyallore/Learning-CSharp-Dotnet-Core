@@ -24,7 +24,7 @@ namespace Variables.Basics.App
             DisplayOutput($"\tFizz Buzz display from {startValue} to {endValue} ", fizzBuzz.GetFizzBuzz());
 
             var person1 = new Person();
-            WriteLine(person1);
+            DisplayOutput("Person Information:", person1.ToString());
 
             WriteLine("\n\nPress any key ...");
             ReadLine();
