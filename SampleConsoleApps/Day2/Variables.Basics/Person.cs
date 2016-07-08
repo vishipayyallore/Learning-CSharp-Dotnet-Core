@@ -38,7 +38,7 @@ namespace Variables.Basics
             personDetails.Append(NewLine);
             personDetails.Append($"You are {Weight} Kgs weight and your salary is {MonthlySalary:C}");
             personDetails.Append(NewLine);
-            personDetails.Append($"Your {IsMarried} person.");
+            personDetails.Append($"You are {IsMarried} person.");
             personDetails.Append(NewLine);
             personDetails.Append(HeaderDoubleDash);
 
