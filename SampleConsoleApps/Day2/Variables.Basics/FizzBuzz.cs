@@ -15,8 +15,6 @@ namespace Variables.Basics
         private const char NewLineValue = '\n';
         private const int ThreeValue = 3;
         private const int FiveValue = 5;
-        private const string HeaderDoubleDash = "======================================================================================================";
-        private const string HeaderSingleDash = "------------------------------------------------------------------------------------------------------";
         #endregion
 
         public FizzBuzz(int startValue = 1, int endValue = 10, int breakAt = 5)
@@ -31,15 +29,11 @@ namespace Variables.Basics
         public string GetFizzBuzz()
         {
             var outputBuilder = new StringBuilder(250);
-            //outputBuilder.Append($"{HeaderDoubleDash}{NewLineValue}");
-            //outputBuilder.Append($"Fizz Buzz display from {_startValue} to {_endValue} ...{NewLineValue}");
-            //outputBuilder.Append($"{HeaderSingleDash}{NewLineValue}");
             _endValue -= (_startValue-1);
             for (var iCtr = 1; iCtr <= _endValue; iCtr++)
             {
                 outputBuilder.Append($"{CheckDivisibility(_startValue++)}{((iCtr % _breakAt == 0) ? NewLineValue : SpaceValue)}");
             }
-            //outputBuilder.Append($"{NewLineValue}{HeaderDoubleDash}");
             return outputBuilder.ToString();
         }
         #endregion
