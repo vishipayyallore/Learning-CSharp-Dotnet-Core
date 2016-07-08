@@ -31,15 +31,15 @@ namespace Variables.Basics
         public string GetFizzBuzz()
         {
             var outputBuilder = new StringBuilder(250);
-            outputBuilder.Append($"{HeaderDoubleDash}{NewLineValue}");
-            outputBuilder.Append($"Fizz Buzz display from {_startValue} to {_endValue} ...{NewLineValue}");
-            outputBuilder.Append($"{HeaderSingleDash}{NewLineValue}");
+            //outputBuilder.Append($"{HeaderDoubleDash}{NewLineValue}");
+            //outputBuilder.Append($"Fizz Buzz display from {_startValue} to {_endValue} ...{NewLineValue}");
+            //outputBuilder.Append($"{HeaderSingleDash}{NewLineValue}");
             _endValue -= (_startValue-1);
             for (var iCtr = 1; iCtr <= _endValue; iCtr++)
             {
                 outputBuilder.Append($"{CheckDivisibility(_startValue++)}{((iCtr % _breakAt == 0) ? NewLineValue : SpaceValue)}");
             }
-            outputBuilder.Append($"{NewLineValue}{HeaderDoubleDash}");
+            //outputBuilder.Append($"{NewLineValue}{HeaderDoubleDash}");
             return outputBuilder.ToString();
         }
         #endregion
