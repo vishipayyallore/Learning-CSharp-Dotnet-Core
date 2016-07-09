@@ -26,6 +26,8 @@ namespace Variables.Basics.App
             var person1 = new Person();
             DisplayOutput("Person Information:", person1.ToString());
 
+            var variablesDemo = new VariablesDemo1Cls();
+            DisplayOutput("Country Information:", variablesDemo.GetDetails());
             WriteLine("\n\nPress any key ...");
             ReadLine();
         }

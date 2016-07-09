@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System.Text;
+using static System.Console;
 
 namespace Variables.Basics
 {
@@ -12,23 +13,18 @@ namespace Variables.Basics
         private const double Weight = 1.88;
         private const decimal Price = 4.99M;
         private const string Fruit = "Apples";
-        private char _letter = 'S';
-        private bool _isHappy = true;
-
-        private const string HeaderDoubleDash = "===================================================";
-        private const string HeaderSingleDash = "---------------------------------------------------";
+        private const char Letter = 'S';
+        private const bool IsHappy = true;
         #endregion
 
         #region Methods
-        public void DisplayDetails()
+        public string GetDetails()
         {
-            WriteLine(HeaderDoubleDash);
-            WriteLine("Information:");
-            WriteLine(HeaderSingleDash);
-            WriteLine($"The Population of UK is {Population:N0}");
-            WriteLine($"{Weight} Kgs of {Fruit} costs {Price:C}");
-            WriteLine($"Your favorite character is {_letter}; your life is Happy and you are a {_isHappy} person.");
-            WriteLine(HeaderDoubleDash);
+            var countryDetails = new StringBuilder(1024);
+            countryDetails.Append($"The Population of UK is {Population:N0}\n");
+            countryDetails.Append($"{Weight} Kgs of {Fruit} costs {Price:C}\n");
+            countryDetails.Append($"Your favorite character is {Letter}; your life is Happy and you are a {IsHappy} person.");
+            return countryDetails.ToString();
         }
         #endregion
     }
