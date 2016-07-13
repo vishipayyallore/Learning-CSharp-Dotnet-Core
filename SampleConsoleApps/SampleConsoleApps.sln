@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day1", "Day1", "{6AB6E98A-57C0-49BE-839E-C99D36FF45BB}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Variables.Basics", "Day2\Variables.Basics\Variables.Basics.xproj", "{6FA5D57D-E1B5-4EF1-8DCB-AB81CD252578}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Variables.Basics.App", "Day2\Variables.Basics.App\Variables.Basics.App.xproj", "{68A5E827-9E24-4EAF-A68F-984266644450}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day3", "Day3", "{EB54A627-4249-42D1-B4DC-D2950D839282}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Day3.Sample.App", "Day3.Sample.App\Day3.Sample.App.xproj", "{E20F8F83-5F5C-4117-8138-90622B0F67A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,10 @@ Global
 		{68A5E827-9E24-4EAF-A68F-984266644450}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68A5E827-9E24-4EAF-A68F-984266644450}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68A5E827-9E24-4EAF-A68F-984266644450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E20F8F83-5F5C-4117-8138-90622B0F67A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E20F8F83-5F5C-4117-8138-90622B0F67A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E20F8F83-5F5C-4117-8138-90622B0F67A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E20F8F83-5F5C-4117-8138-90622B0F67A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +54,6 @@ Global
 		{26E13B77-5BC8-4496-9B91-8881EA93F32A} = {6AB6E98A-57C0-49BE-839E-C99D36FF45BB}
 		{6FA5D57D-E1B5-4EF1-8DCB-AB81CD252578} = {7D9318F9-BCD3-46B9-AEE7-739F02C9C014}
 		{68A5E827-9E24-4EAF-A68F-984266644450} = {7D9318F9-BCD3-46B9-AEE7-739F02C9C014}
+		{E20F8F83-5F5C-4117-8138-90622B0F67A5} = {EB54A627-4249-42D1-B4DC-D2950D839282}
 	EndGlobalSection
 EndGlobal

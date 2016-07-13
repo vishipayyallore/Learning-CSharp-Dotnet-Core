@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using static System.Console;
 
 namespace Variables.Basics
 {
