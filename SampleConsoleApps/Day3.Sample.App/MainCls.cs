@@ -14,8 +14,20 @@ namespace Day3.Sample.App
                 endValue = Int32.Parse(args[1]);
             }
 
+            endValue -= startValue - 1;
+            for (int iCtr = 0; iCtr < endValue; iCtr++)
+            {
+                var toPrint = (startValue%3 == 0) ? "Fizz" : "";
+                toPrint += (startValue % 5 == 0) ? "Buzz" : "";
+                toPrint = ((startValue%3 != 0) && (startValue%5 != 0)) ? startValue.ToString() : toPrint;
+                Console.WriteLine(toPrint);
+                startValue++;
+            }
+
+
             Console.WriteLine("\n\nPress any key ...");
             Console.ReadKey();
         }
+
     }
 }

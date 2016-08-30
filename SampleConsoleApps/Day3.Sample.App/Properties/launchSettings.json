@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Day3.Sample.App": {
+      "commandName": "Project",
+      "commandLineArgs": "2"
+    }
+  }
+}
