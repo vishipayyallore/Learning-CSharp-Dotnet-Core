@@ -31,7 +31,7 @@ namespace Day3.Sample.App
             {
                 for (var jCtr = 0; jCtr < _columns; jCtr++)
                 {
-                    if (_number[iCtr, jCtr] != 1) continue;
+                    if ((_number[iCtr, jCtr] != 1) || (jCtr+1 == _columns)) continue;
                     if (_number[iCtr, jCtr + 1] == 1)
                     {
                         _count[string.Format("{0}{1}", iCtr, jCtr + 1)] = 1;
