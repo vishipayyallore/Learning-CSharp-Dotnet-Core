@@ -6,6 +6,16 @@ namespace Day3.Sample.App
     {
         public static void Main(string[] args)
         {
+
+            var rows = Console.ReadLine().Trim();
+            var columns = Console.ReadLine().Trim();
+            int _rows = Int32.Parse(rows);
+            int _columns = Int32.Parse(rows);
+
+            int [,] _number = new int[_rows, _columns];
+            _number.
+
+
             int startValue = Int32.Parse(args[0]);
             int endValue = 10;
 
