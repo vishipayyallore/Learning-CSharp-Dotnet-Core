@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace Day3.Sample.App
@@ -8,21 +9,7 @@ namespace Day3.Sample.App
         public static void Main(string[] args)
         {
 
-            var rows = Console.ReadLine().Trim();
-            var columns = Console.ReadLine().Trim();
-            int _rows = Int32.Parse(rows);
-            int _columns = Int32.Parse(rows);
-
-            int [,] _number = new int[_rows, _columns];
-            for (int iCtr = 0; iCtr < _rows; iCtr++)
-            {
-                var _data = Console.ReadLine().Trim().Split(' ');
-                for (int jCtr = 0; jCtr < _columns; jCtr++)
-                {
-                    _number[iCtr, jCtr] = Int32.Parse(_data[jCtr]);
-                }
-            }
-
+            ArrayDemo1.Run();
 
             int startValue = Int32.Parse(args[0]);
             int endValue = 10;
