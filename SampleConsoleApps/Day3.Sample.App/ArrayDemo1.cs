@@ -10,16 +10,16 @@ namespace Day3.Sample.App
         public static void Run()
         {
             var inputRows = Console.ReadLine().Trim();
-            var columns = Console.ReadLine().Trim();
+            var inputcolumns = Console.ReadLine().Trim();
             var rows = int.Parse(inputRows);
-            var _columns = int.Parse(columns);
+            var columns = int.Parse(inputcolumns);
             var count = new Dictionary<string, int>();
 
-            var numbers = new int[rows, _columns];
+            var numbers = new int[rows, columns];
             for (var iCtr = 0; iCtr < rows; iCtr++)
             {
                 var data = Console.ReadLine().Trim().Split(' ');
-                for (var jCtr = 0; jCtr < _columns; jCtr++)
+                for (var jCtr = 0; jCtr < columns; jCtr++)
                 {
                     numbers[iCtr, jCtr] = int.Parse(data[jCtr]);
                 }
@@ -27,9 +27,9 @@ namespace Day3.Sample.App
 
             for (var iCtr = 0; iCtr < rows - 1; iCtr++)
             {
-                for (var jCtr = 0; jCtr < _columns; jCtr++)
+                for (var jCtr = 0; jCtr < columns; jCtr++)
                 {
-                    if ((numbers[iCtr, jCtr] != 1) || (jCtr+1 == _columns)) continue;
+                    if ((numbers[iCtr, jCtr] != 1) || (jCtr+1 == columns)) continue;
                     if (numbers[iCtr, jCtr + 1] == 1)
                     {
                         count[string.Format("{0}{1}", iCtr, jCtr + 1)] = 1;
