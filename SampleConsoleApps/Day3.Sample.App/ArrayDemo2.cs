@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace Day3.Sample.App
 {
 
-    public static class ArrayDemo1
+    public static class ArrayDemo2
     {
 
         public static void Run()
@@ -15,15 +15,15 @@ namespace Day3.Sample.App
             var columns = Console.ReadLine().Trim();
             var _rows = int.Parse(rows);
             var _columns = int.Parse(columns);
-            var count = new Dictionary<string, int>();
+            var _count = new Dictionary<string, int>();
 
-            var numbers = new int[_rows, _columns];
+            var _number = new int[_rows, _columns];
             for (var iCtr = 0; iCtr < _rows; iCtr++)
             {
-                var data = Console.ReadLine().Trim().Split(' ');
+                var _data = Console.ReadLine().Trim().Split(' ');
                 for (var jCtr = 0; jCtr < _columns; jCtr++)
                 {
-                    numbers[iCtr, jCtr] = int.Parse(data[jCtr]);
+                    _number[iCtr, jCtr] = int.Parse(_data[jCtr]);
                 }
             }
 
@@ -31,23 +31,23 @@ namespace Day3.Sample.App
             {
                 for (var jCtr = 0; jCtr < _columns; jCtr++)
                 {
-                    if ((numbers[iCtr, jCtr] != 1) || (jCtr+1 == _columns)) continue;
-                    if (numbers[iCtr, jCtr + 1] == 1)
+                    if ((_number[iCtr, jCtr] != 1) || (jCtr+1 == _columns)) continue;
+                    if (_number[iCtr, jCtr + 1] == 1)
                     {
-                        count[string.Format("{0}{1}", iCtr, jCtr + 1)] = 1;
+                        _count[string.Format("{0}{1}", iCtr, jCtr + 1)] = 1;
                     }
-                    if (numbers[iCtr + 1, jCtr + 1] == 1)
+                    if (_number[iCtr + 1, jCtr + 1] == 1)
                     {
-                        count[string.Format("{0}{1}", iCtr + 1, jCtr + 1)] = 1;
+                        _count[string.Format("{0}{1}", iCtr + 1, jCtr + 1)] = 1;
                     }
-                    if (numbers[iCtr + 1, jCtr] == 1)
+                    if (_number[iCtr + 1, jCtr] == 1)
                     {
-                        count[string.Format("{0}{1}", iCtr + 1, jCtr)] = 1;
+                        _count[string.Format("{0}{1}", iCtr + 1, jCtr)] = 1;
                     }
                 }
             }
 
-            Console.WriteLine($"Count: {count.Count + 1}");
+            Console.WriteLine($"Count: {_count.Count + 1}");
         }
 
     }
