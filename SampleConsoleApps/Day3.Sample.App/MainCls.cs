@@ -7,9 +7,11 @@ namespace Day3.Sample.App
         public static void Main(string[] args)
         {
 
+            ArrayDemo2.Run();
+
             ArrayDemo1.Run();
 
-            int startValue = Int32.Parse(args[0]);
+            int startValue = int.Parse(args[0]);
             int endValue = 10;
 
             if (args.Length == 2)
