@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Day3.Sample.App
 {
@@ -20,6 +21,7 @@ namespace Day3.Sample.App
                 var numberOfElements = int.Parse(Console.ReadLine().Trim());
                 Console.WriteLine("Enter the Values for Array:");
                 var arrayValues = Console.ReadLine().Trim().Split(' ');
+                var dataArray = arrayValues.Select(int.Parse).ToArray();
             }
         }
 
