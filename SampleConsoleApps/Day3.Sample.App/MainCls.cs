@@ -16,6 +16,11 @@ namespace Day3.Sample.App
                 arrayElements[iCtr] = int.Parse(Console.ReadLine().Trim());
             }
 
+            for (var iCtr = numberOfElements-1; iCtr >= 0; iCtr--)
+            {
+                Console.WriteLine($"{iCtr + 1} Element: {arrayElements[iCtr]}");
+            }
+
             ArrayDemo2.Run();
 
             ArrayDemo1.Run();
