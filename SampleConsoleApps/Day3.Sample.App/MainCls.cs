@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace Day3.Sample.App
 {
@@ -8,39 +7,7 @@ namespace Day3.Sample.App
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter the number of Elements:");
-            var numberOfElements = int.Parse(Console.ReadLine().Trim());
-            var callingOrder = new int[numberOfElements];
-            var idealOrder = new int[numberOfElements];
-            var lastIndex = numberOfElements - 1;
-
-            Console.WriteLine("Enter Elements for Calling Order:");
-            var arrayValues = Console.ReadLine().Trim().Split(' ');
-            callingOrder = arrayValues.Select(int.Parse).ToArray();
-            Console.WriteLine("Enter Elements for Ideal Order:");
-            arrayValues = null;
-            arrayValues = Console.ReadLine().Trim().Split(' ');
-            idealOrder = arrayValues.Select(int.Parse).ToArray();
-
-            
-            for (var iCtr = 0; iCtr < numberOfElements; iCtr++)
-            {
-                for (var jCtr = iCtr; jCtr < numberOfElements; jCtr++)
-                {
-                    if (idealOrder[iCtr] != callingOrder[iCtr])
-                    {
-                        var temp = callingOrder[iCtr];
-                        Array.Copy(callingOrder, (iCtr+1), callingOrder, iCtr, (callingOrder.Length - (iCtr + 1)));
-                        callingOrder[lastIndex] = temp;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                    Console.WriteLine($" {idealOrder[iCtr]} --- {callingOrder[jCtr]}");
-                }
-                Console.WriteLine();
-            }
+            CallingNIdealOrder.Run();
 
             SingleDArrayReverse.Run();
 
