@@ -29,8 +29,8 @@ namespace Day3.Sample.App
                 {
                     if (idealOrder[iCtr] != callingOrder[iCtr])
                     {
-                        var temp = callingOrder[lastIndex];
-                        Array.Copy(callingOrder, 0, callingOrder, 1, callingOrder.Length - 1);
+                        var temp = callingOrder[iCtr];
+                        Array.Copy(callingOrder, (iCtr+1), callingOrder, iCtr, (callingOrder.Length - (iCtr + 1)));
                         callingOrder[lastIndex] = temp;
                     }
                     else
