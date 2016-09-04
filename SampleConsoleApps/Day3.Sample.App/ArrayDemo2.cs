@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Day3.Sample.App
 {
-
+     
     public static class ArrayDemo2
     {
 
