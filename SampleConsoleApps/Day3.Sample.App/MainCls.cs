@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Day3.Sample.App
 {
@@ -8,6 +6,9 @@ namespace Day3.Sample.App
     {
         public static void Main(string[] args)
         {
+
+            
+            
 
             //FizzBuzz.Run();
 
