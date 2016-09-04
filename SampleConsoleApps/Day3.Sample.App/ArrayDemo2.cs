@@ -34,6 +34,43 @@ namespace Day3.Sample.App
             
         }
 
+        public static void Run1()
+        {
+            var rows = int.Parse(Console.ReadLine().Trim());
+            if ((rows < 1) || (rows > 10))
+            {
+                return;
+            }
+            var sum = 0;
+            var count = new Dictionary<int, long>();
+
+            for (var iCtr = 0; iCtr < rows; iCtr++)
+            {
+                var numberOfElements = int.Parse(Console.ReadLine().Trim());
+                if ((numberOfElements < 1) || (numberOfElements > 100000))
+                {
+                    continue;
+                }
+                sum += numberOfElements;
+                var arrayValues = Console.ReadLine().Trim().Split(' ');
+                if (arrayValues[0].Trim().Length < 1)
+                {
+                    continue;
+                }
+
+
+                var dataArray = arrayValues.Select(int.Parse).ToArray();
+                var returnValue = dataArray.All(element => ((element >= -10000) && (element <= 10000)));
+                if (!returnValue) continue;
+                count[iCtr] = dataArray.Where(e => e > 0).Sum();
+            }
+
+            foreach (var keyValuePair in count)
+            {
+                Console.WriteLine($"{sum} {keyValuePair.Value}");
+            }
+        }
+
     }
 
 }

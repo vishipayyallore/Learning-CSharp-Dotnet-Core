@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Day3.Sample.App
 {
@@ -7,6 +9,8 @@ namespace Day3.Sample.App
         public static void Main(string[] args)
         {
 
+            //FizzBuzz.Run();
+
             //CallingNIdealOrder.Run();
 
             //SingleDArrayReverse.Run();
@@ -14,18 +18,6 @@ namespace Day3.Sample.App
             //ArrayDemo2.Run();
 
             //ArrayDemo1.Run();
-
-            //int startValue = int.Parse(args[0]);
-            //int endValue = 10;
-
-            //if (args.Length == 2)
-            //{
-            //    endValue = Int32.Parse(args[1]);
-            //}
-
-            
-            
-
 
             Console.WriteLine("\n\nPress any key ...");
             Console.ReadKey();
