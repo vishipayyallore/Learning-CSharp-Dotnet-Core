@@ -7,8 +7,9 @@ namespace Day3.Sample.App
         public static void Main(string[] args)
         {
 
-            
-            
+            //ConsecutiveLetters.Run();
+
+            //ReverseString.Run();
 
             //FizzBuzz.Run();
 
