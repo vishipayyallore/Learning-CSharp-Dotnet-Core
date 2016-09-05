@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Day3.Sample.App
 {
@@ -98,8 +99,43 @@ namespace Day3.Sample.App
 
         public static void Run2()
         {
-            
+            var count = new Dictionary<string, int>();
+            var rows = int.Parse(Console.ReadLine().Trim());
+            var columns = int.Parse(Console.ReadLine().Trim());
+            if (((columns < 1) || (columns > 10)) || ((rows < 1) || (rows > 10)))
+            {
+                return;
+            }
+
+            var numbers = new int[rows][];
+            for (var iCtr = 0; iCtr < rows; iCtr++)
+            {
+                var data = Console.ReadLine().Trim().Split(' ');
+                numbers[iCtr] = data.Select(int.Parse).ToArray();
+            }
+
+            for (var iCtr = 0; iCtr < rows - 1; iCtr++)
+            {
+                for (var jCtr = 0; jCtr < columns; jCtr++)
+                {
+                    if ((numbers[iCtr][jCtr] != 1) || (jCtr + 1 == columns)) continue;
+                    if (numbers[iCtr][jCtr + 1] == 1)
+                    {
+                        count[string.Format("{0}{1}", iCtr, jCtr + 1)] = 1;
+                    }
+                    if (numbers[iCtr + 1][jCtr + 1] == 1)
+                    {
+                        count[string.Format("{0}{1}", iCtr + 1, jCtr + 1)] = 1;
+                    }
+                    if (numbers[iCtr + 1][jCtr] == 1)
+                    {
+                        count[string.Format("{0}{1}", iCtr + 1, jCtr)] = 1;
+                    }
+                }
+            }
+            Console.WriteLine($"{count.Count + 1}");
         }
+
     }
 
 }
