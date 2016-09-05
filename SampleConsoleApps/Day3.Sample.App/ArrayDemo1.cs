@@ -96,6 +96,10 @@ namespace Day3.Sample.App
             Console.WriteLine($"{count.Count + 1}");
         }
 
+        public static void Run2()
+        {
+            
+        }
     }
 
 }
