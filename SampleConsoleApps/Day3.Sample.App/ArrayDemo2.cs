@@ -60,7 +60,7 @@ namespace Day3.Sample.App
 
 
                 var dataArray = arrayValues.Select(int.Parse).ToArray();
-                var returnValue = dataArray.All(element => ((element >= -10000) && (element <= 10000)));
+                var returnValue = dataArray.All(element => (element >= -10000) && (element <= 10000));
                 if (!returnValue) continue;
                 count[iCtr] = dataArray.Where(e => e > 0).Sum();
             }

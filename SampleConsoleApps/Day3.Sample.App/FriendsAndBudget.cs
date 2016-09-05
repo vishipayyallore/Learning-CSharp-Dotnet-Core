@@ -27,7 +27,7 @@ namespace Day3.Sample.App
                 for (var iCtr = 0; iCtr < friendsCount; iCtr++)
                 {
                     var outputValue = int.Parse(Console.ReadLine().Trim());
-                    friends[iCtr] = (outputValue > 1000000) ? 0 : outputValue;
+                    friends[iCtr] = outputValue > 1000000 ? 0 : outputValue;
                 }
 
                 var found = false;
@@ -43,7 +43,7 @@ namespace Day3.Sample.App
                         break;
                     }
                 }
-                Console.WriteLine((found) ? "Yes" : "No");
+                Console.WriteLine(found ? "Yes" : "No");
             }
         }
     }

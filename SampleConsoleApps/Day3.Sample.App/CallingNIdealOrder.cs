@@ -27,7 +27,7 @@ namespace Day3.Sample.App
                     if (idealOrder[iCtr] != callingOrder[iCtr])
                     {
                         var temp = callingOrder[iCtr];
-                        Array.Copy(callingOrder, (iCtr + 1), callingOrder, iCtr, (callingOrder.Length - (iCtr + 1)));
+                        Array.Copy(callingOrder, iCtr + 1, callingOrder, iCtr, callingOrder.Length - (iCtr + 1));
                         callingOrder[lastIndex] = temp;
                         count++;
                     }

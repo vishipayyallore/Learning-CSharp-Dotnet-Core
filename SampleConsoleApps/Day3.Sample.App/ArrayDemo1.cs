@@ -102,7 +102,7 @@ namespace Day3.Sample.App
             var count = new Dictionary<string, int>();
             var rows = int.Parse(Console.ReadLine().Trim());
             var columns = int.Parse(Console.ReadLine().Trim());
-            if (((columns < 1) || (columns > 10)) || ((rows < 1) || (rows > 10)))
+            if ((columns < 1) || (columns > 10) || (rows < 1) || (rows > 10))
             {
                 return;
             }
