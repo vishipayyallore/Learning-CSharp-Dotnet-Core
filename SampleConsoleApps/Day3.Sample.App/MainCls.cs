@@ -9,6 +9,7 @@ namespace Day3.Sample.App
         public static void Main(string[] args)
         {
 
+            ArraySumOfElements.Run();
 
             ArrayDemo1.Run2();
 
