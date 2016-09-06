@@ -9,6 +9,7 @@ namespace Day3.Sample.App
         public static void Main(string[] args)
         {
 
+
             ArrayDemo1.Run2();
 
             FriendsAndBudget.Run();
