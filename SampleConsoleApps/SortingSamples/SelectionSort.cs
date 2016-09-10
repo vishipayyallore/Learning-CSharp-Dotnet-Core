@@ -26,7 +26,7 @@ namespace SortingSamples
                 arrayData[itemIndex] = temp;
                 Console.WriteLine($"Pass {iCtr + 1}: {string.Join(" ", arrayData)}");
             }
-            Console.WriteLine($"Selection Sorted: {string.Join(" ", arrayData)}");
+            Console.WriteLine($"Selection Sorted: {string.Join(" ", arrayData)}\n");
         }
     }
 }

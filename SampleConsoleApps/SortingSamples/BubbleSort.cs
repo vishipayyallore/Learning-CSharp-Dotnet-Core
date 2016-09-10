@@ -23,7 +23,7 @@ namespace SortingSamples
                 }
                 Console.WriteLine($"Pass {iCtr + 1}: {string.Join(" ", arrayData)}");
             }
-            Console.WriteLine($"\nBubble Sorted: {string.Join(" ", arrayData)}");
+            Console.WriteLine($"\nBubble Sorted: {string.Join(" ", arrayData)}\n");
         }
     }
 
