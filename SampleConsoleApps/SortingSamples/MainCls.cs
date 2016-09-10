@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace SortingSamples
 {
@@ -8,6 +9,8 @@ namespace SortingSamples
 
         public static void Main(string[] args)
         {
+
+            var arrayData = Console.ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
 
             BubbleSort.Run();
 
