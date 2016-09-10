@@ -7,7 +7,7 @@ namespace SortingSamples
     public class BubbleSort
     {
 
-        //Bubble Sort. {89 76 45 92 67 12 99 | 7, 4, 5, 2 | 4 83 9 6 34 45}
+        //Bubble Sort. {89 76 45 92 67 12 99 | 7 4 5 2 | 4 83 9 6 34 45}
         public static void Run()
         {
             var arrayData = Console.ReadLine().Trim().Split(' ').Select(int.Parse).ToArray();
