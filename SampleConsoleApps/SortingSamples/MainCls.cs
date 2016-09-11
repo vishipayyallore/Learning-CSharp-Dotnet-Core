@@ -113,6 +113,10 @@ namespace SortingSamples
 
             Console.WriteLine($"{output.ObjectId} {output1.ObjectId}");
 
+            var maximumTimesInADay = salesList.Products.Where(product => product.ObjectId == output1.ObjectId);
+            var output2 = maximumTimesInADay.OrderByDescending(r => r.DayId).Last();
+            Console.WriteLine($"{output2.DayId} {output2.ObjectId} {output1.Count}");
+
             //Selection Sort
             SelectionSort.Run();
 
