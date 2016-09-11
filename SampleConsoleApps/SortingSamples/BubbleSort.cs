@@ -14,7 +14,7 @@ namespace SortingSamples
 
             for (var iCtr = 0; iCtr < arrayData.Length - 1; iCtr++)
             {
-                for (var jCtr = 0; jCtr < (arrayData.Length - (iCtr + 1)); jCtr++)
+                for (var jCtr = 0; jCtr < arrayData.Length - (iCtr + 1); jCtr++)
                 {
                     if (arrayData[jCtr] <= arrayData[jCtr + 1]) continue;
                     var temp = arrayData[jCtr];
