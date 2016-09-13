@@ -1,4 +1,4 @@
-﻿namespace LogicalSamples
+﻿namespace LogicalSamples.TOZimbo
 {
     public class Product
     {
