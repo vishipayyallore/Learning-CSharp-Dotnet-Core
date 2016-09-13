@@ -2,8 +2,6 @@
 {
     public class Product
     {
-        public Product() { }
-
         public int DayId { get; set; }
         public int RowId { get; set; }
         public int UserId { get; set; }

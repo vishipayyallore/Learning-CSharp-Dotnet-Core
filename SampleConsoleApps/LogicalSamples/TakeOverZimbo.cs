@@ -85,12 +85,12 @@ namespace LogicalSamples
                 }
             }
 
-            var highestAverage = salesList.Products.GroupBy(t => new { ObjectId = t.ObjectId })
-                .Select(g => new { Average = g.Average(r => r.Rating), ObjectId = g.Key.ObjectId });
+            var highestAverage = salesList.Products.GroupBy(t => new {t.ObjectId })
+                .Select(g => new { Average = g.Average(r => r.Rating), g.Key.ObjectId });
             var output = highestAverage.OrderByDescending(r => r.Average).First();
 
-            var numberOfTimes = salesList.Products.GroupBy(t => new { ObjectId = t.ObjectId })
-                .Select(g => new { Count = g.Count(), ObjectId = g.Key.ObjectId });
+            var numberOfTimes = salesList.Products.GroupBy(t => new {t.ObjectId })
+                .Select(g => new { Count = g.Count(), g.Key.ObjectId });
             var output1 = numberOfTimes.OrderByDescending(r => r.Count).First();
 
             Console.WriteLine($"{output.ObjectId} {output1.ObjectId}");
