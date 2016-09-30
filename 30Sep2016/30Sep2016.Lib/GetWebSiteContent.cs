@@ -13,6 +13,10 @@ namespace _30Sep2016.Lib
             var output = await httpClient.GetAsync(pageName);
 
             WriteLine($"{output.StatusCode}");
+
+            WriteLine($"{output.Content.Headers.GetValues("Content-Type")}");
+
+            WriteLine($"{output.Content.ReadAsStringAsync()}");
         }
 
     }
