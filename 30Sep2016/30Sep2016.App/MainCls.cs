@@ -15,12 +15,11 @@ namespace _30Sep2016.App
             const string siteUrl = "https://in.YYY.com/?p=us";
             const string pageName = "";
 
-            DescribeMe.Run();
-
+            WriteLine($"Variable Name: {nameof(output)} :: Value: {output}");
             GetAssemblyInformation(assemblyName);
 
-            WriteLine($"{output}");
-            
+            DescribeMe.Run();
+
             var getContent = new GetWebSiteContent();
             getContent.Run(siteUrl, pageName);
 
