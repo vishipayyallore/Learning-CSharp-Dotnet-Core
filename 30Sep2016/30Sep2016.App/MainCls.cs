@@ -12,9 +12,25 @@ namespace _30Sep2016.App
             ForegroundColor = System.ConsoleColor.Cyan;
             const string output = "Hello .Net Core!!!";
             const string assemblyName = "30Sep2016.Lib";
+            const string siteUrl = "https://in.YYY.com/?p=us";
+            const string pageName = "";
 
             DescribeMe.Run();
 
+            GetAssemblyInformation(assemblyName);
+
+            WriteLine($"{output}");
+            
+            var getContent = new GetWebSiteContent();
+            getContent.Run(siteUrl, pageName);
+
+            WriteLine("\n\nPress any key ...");
+            ReadLine();
+        }
+
+        #region Private Methods.
+        private static void GetAssemblyInformation(string assemblyName)
+        {
             var assemblyList = Assembly.GetEntryAssembly().GetReferencedAssemblies();
             foreach (var assembly in assemblyList.Where(assembly => assembly.Name == assemblyName))
             {
@@ -26,17 +42,8 @@ namespace _30Sep2016.App
                     WriteLine($"{definedType.Name} {definedType.FullName} {definedType.DeclaredMethods.Count()}");
                 }
             }
-
-            WriteLine($"{output}");
-            //const string siteUrl = "https://www.AAA.com/en-in/";
-            //const string pageName = "";
-            const string siteUrl = "https://in.YYY.com/?p=us";
-            const string pageName = "Home";
-            var getContent = new GetWebSiteContent();
-            getContent.Run(siteUrl, pageName);
-
-            WriteLine("\n\nPress any key ...");
-            ReadLine();
         }
+        #endregion
+
     }
 }
