@@ -13,6 +13,8 @@ namespace _30Sep2016.App
             const string output = "Hello .Net Core!!!";
             const string assemblyName = "30Sep2016.Lib";
 
+            DescribeMe.Run();
+
             var assemblyList = Assembly.GetEntryAssembly().GetReferencedAssemblies();
             foreach (var assembly in assemblyList.Where(assembly => assembly.Name == assemblyName))
             {
