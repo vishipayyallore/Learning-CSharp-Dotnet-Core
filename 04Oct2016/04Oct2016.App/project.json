@@ -8,7 +8,8 @@
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.0.1"
-    }
+    },
+    "04Oct2016.Lib":  "1.0.1"
   },
 
   "frameworks": {
