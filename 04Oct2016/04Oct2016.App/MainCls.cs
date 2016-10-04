@@ -9,6 +9,8 @@ namespace _04Oct2016.App
         {
             ForegroundColor = System.ConsoleColor.Cyan;
 
+            AboutNumbers.DisplayAccuracy();
+
             AboutNumbers.DisplayMinAndMax();
 
             WriteLine("\n\nPress any key ...");
