@@ -16,7 +16,8 @@ namespace _04Oct2016.App
             new DataTypes().DisplayData()
                     .DisplayData1()
                     .DisplayData2()
-                    .DisplayData3();
+                    .DisplayData3()
+                    .DisplayData4();
 
             SpecialDataTypes.DisplayDynamicType();
 
