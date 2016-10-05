@@ -9,6 +9,8 @@ namespace _04Oct2016.App
         {
             ForegroundColor = System.ConsoleColor.Cyan;
 
+            SpecialDataTypes.DisplayDynamicType();
+
             SpecialDataTypes.DisplayObjectType();
 
             AboutNumbers.DisplayAccuracy();
