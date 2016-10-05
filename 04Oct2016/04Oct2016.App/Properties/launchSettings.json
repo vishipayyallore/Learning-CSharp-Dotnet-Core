@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "04Oct2016.App": {
+      "commandName": "Project",
+      "commandLineArgs": "\"George Mathew\"  \"Jerry Thomas\" \"Manish Agarwal\" \"Sajad Ali\""
+    }
+  }
+}
