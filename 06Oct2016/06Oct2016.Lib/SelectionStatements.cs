@@ -13,10 +13,11 @@ namespace _06Oct2016.Lib
         /// <returns></returns>
         public SelectionStatements DisplaySwitchStatements()
         {
+            WriteLine("While Statement Demo -----");
 
             Generate_RandomNumer:
-            var number = (new Random()).Next(1, 10);
-            WriteLine($"My random number is {number}");
+                var number = (new Random()).Next(1, 10);
+                WriteLine($"Random number is {number}");
 
             switch (number)
             {
@@ -36,6 +37,43 @@ namespace _06Oct2016.Lib
                 default:
                     WriteLine($"Just {number}");
                     break;
+            }
+            return this;
+        }
+
+        public SelectionStatements DisplayWhile_DoWhileStatements()
+        {
+            var iCtr = 0;
+            WriteLine("While Statement Demo -----");
+            while (iCtr < 10)
+            {
+                WriteLine(iCtr);
+                iCtr++;
+            }
+
+            WriteLine("Do While Statement Demo -----");
+            iCtr = 0;
+            do
+            {
+                WriteLine(iCtr);
+                iCtr++;
+            } while (iCtr < 10);
+            return this;
+        }
+
+        public SelectionStatements DisplayFor_ForEachStatements()
+        {
+            WriteLine("For Loop Demo -----");
+            for (var iCtr = 0; iCtr < 10; iCtr++)
+            {
+                WriteLine(iCtr);
+            }
+
+            WriteLine("ForEach Loop Demo -----");
+            string[] names = { "Adam", "Barry", "Charlie" };
+            foreach (var name in names)
+            {
+                WriteLine($"{name} has {name.Length} characters.");
             }
             return this;
         }

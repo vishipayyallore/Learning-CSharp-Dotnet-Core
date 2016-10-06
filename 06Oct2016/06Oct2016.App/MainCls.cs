@@ -10,7 +10,9 @@ namespace _06Oct2016.App
             ForegroundColor = System.ConsoleColor.Cyan;
 
             (new SelectionStatements())
-                .DisplaySwitchStatements();
+                .DisplaySwitchStatements()
+                .DisplayWhile_DoWhileStatements()
+                .DisplayFor_ForEachStatements();
 
             WriteLine("\n\nPress any key ...");
             ReadLine();
