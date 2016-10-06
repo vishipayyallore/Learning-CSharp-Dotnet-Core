@@ -9,6 +9,8 @@ namespace _04Oct2016.App
         {
             ForegroundColor = System.ConsoleColor.Cyan;
 
+            WriteLine((args.Length == 0) ? "There are no arguments." : "There is at least one argument.");
+
             //"George Mathew"  "Jerry Thomas" "Manish Agarwal" "Sajad Ali"
             WriteLine($"There are {args.Length} arguments.");
             WriteLine($"{string.Join(" ", args)}");
