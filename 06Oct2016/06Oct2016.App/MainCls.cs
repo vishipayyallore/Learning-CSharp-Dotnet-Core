@@ -9,7 +9,16 @@ namespace _06Oct2016.App
         {
             ForegroundColor = System.ConsoleColor.Cyan;
 
-            (new SelectionStatements())
+            new ExceptionsHandling()
+                .DisplayTryCatch()
+                .DisplayTryCatchFinally()
+                .DisplayUsingDemo();
+
+            new CastingNParsing()
+                .DisplayCastingConverting()
+                .DisplayParsing();
+
+            new SelectionStatements()
                 .DisplaySwitchStatements()
                 .DisplayWhile_DoWhileStatements()
                 .DisplayFor_ForEachStatements();
