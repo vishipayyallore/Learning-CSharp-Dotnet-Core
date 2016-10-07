@@ -6,9 +6,53 @@ namespace _06Oct2016.Lib
 {
     public class ExceptionsHandling
     {
+        #region Variables
         private const string FileFullPath = @".\Data\file.txt";
+        #endregion
 
         #region Methods
+        public ExceptionsHandling DisplayErrorDemo2()
+        {
+            Write("Enter a number between 1 and 255: ");
+            var value1 = byte.Parse(ReadLine().Trim());
+            Write("Enter another number between 1 and 255: ");
+            var value2 = byte.Parse(ReadLine().Trim());
+
+            try
+            {
+                var answer = value1 / value2;
+                WriteLine($"{value1} divided by {value2} is {answer}");
+            }
+            catch (Exception errorObject)
+            {
+                WriteLine($"{errorObject.GetType().Name} :: {errorObject.Message}");
+            }
+            return this;
+        }
+
+        public ExceptionsHandling DisplayErrorDemo1()
+        {
+            const int number = 500;
+
+            checked
+            {
+                try
+                {
+                    for (byte iCtr = 0; iCtr < number; iCtr++)
+                    {
+                        WriteLine(iCtr);
+                    }
+
+                }
+                catch (Exception errorObject)
+                {
+                    WriteLine($"{errorObject.GetType()} :: {errorObject.Message}");
+                }
+            }
+
+            return this;
+        }
+
         public ExceptionsHandling DisplayUsingDemo()
         {
             using (var file2 = File.OpenWrite(FileFullPath))
@@ -28,6 +72,7 @@ namespace _06Oct2016.Lib
 
             return this;
         }
+
         public ExceptionsHandling DisplayTryCatchFinally()
         {
             FileStream file = null;

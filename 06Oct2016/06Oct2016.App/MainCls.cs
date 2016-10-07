@@ -9,7 +9,11 @@ namespace _06Oct2016.App
         {
             ForegroundColor = System.ConsoleColor.Cyan;
 
+            FizzBuzz.Run();
+
             new ExceptionsHandling()
+                .DisplayErrorDemo1()
+                .DisplayErrorDemo2()
                 .DisplayTryCatch()
                 .DisplayTryCatchFinally()
                 .DisplayUsingDemo();
