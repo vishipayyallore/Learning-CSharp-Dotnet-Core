@@ -7,7 +7,10 @@ namespace Basic.Programs
     {
         public void Run()
         {
-            throw new NotImplementedException();
+            do
+            {
+
+            } while (true);
         }
     }
 }
