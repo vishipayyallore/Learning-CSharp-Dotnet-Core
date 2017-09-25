@@ -1,5 +1,5 @@
 ﻿using Programs.CoreLibrary;
-using System;
+using static System.Console;
 
 namespace Basic.Programs
 {
@@ -9,7 +9,9 @@ namespace Basic.Programs
         {
             do
             {
-
+                var number = int.Parse(ReadLine().Trim());
+                if(number == 42) { break; }
+                WriteLine(number);
             } while (true);
         }
     }

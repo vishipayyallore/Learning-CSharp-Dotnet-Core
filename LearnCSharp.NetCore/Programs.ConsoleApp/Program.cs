@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Basic.Programs;
+using System;
 using static System.Console;
 
 namespace Programs.ConsoleApp
@@ -8,6 +9,9 @@ namespace Programs.ConsoleApp
         static void Main(string[] args)
         {
             ForegroundColor = ConsoleColor.Yellow;
+
+            var currentObject = new LifeUniverseEverything();
+            currentObject.Run();
 
             WriteLine("Hello World!");
 
